@@ -1,11 +1,4 @@
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  Platform,
-  Pressable,
-} from "react-native";
+import { View, Image, StyleSheet, Platform, Pressable } from "react-native";
 import EvilIconsIcon from "react-native-vector-icons/EvilIcons";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome6";
@@ -63,6 +56,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingTop: Platform.OS === "ios" ? 30 : 25,
     paddingHorizontal: Platform.OS === "ios" ? 40 : 20,
+    backgroundColor: "white",
   },
   logo: {
     width: 130,
