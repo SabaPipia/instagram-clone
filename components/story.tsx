@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, StyleSheet, FlatList } from "react-native";
 import { StoryDataDummy } from "../config/DummyData/StoryData";
-import StoryItem from "./storyItem";
+import StoryItem from "./storyComponents/storyItem";
 import { sortStoryData } from "../utils/story/storySorting";
 
 // pluscircle for dark more

@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingTop: Platform.OS === "ios" ? 30 : 25,
-    paddingHorizontal: Platform.OS === "ios" ? 40 : 20,
+    // paddingHorizontal: Platform.OS === "ios" ? 40 : 20,
+    paddingHorizontal: 5,
     backgroundColor: "white",
   },
   logo: {

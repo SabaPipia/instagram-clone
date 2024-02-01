@@ -2,7 +2,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import React, { useEffect, useState } from "react";
 import { Pressable, View, Text, StyleSheet, Image } from "react-native";
 import AntDesignIcons from "react-native-vector-icons/AntDesign";
-import { StoryInterface } from "../types/home";
+import { StoryInterface } from "../../types/home";
 
 export default function StoryItem({
   item,
