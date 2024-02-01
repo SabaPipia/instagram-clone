@@ -1,9 +1,9 @@
 import { Text, View, StyleSheet } from "react-native";
 
-export default function NotificationScreen() {
+export default function SearchScreen() {
   return (
     <View style={styles.container}>
-      <Text>This is notofication</Text>
+      <Text>This is search</Text>
     </View>
   );
 }
