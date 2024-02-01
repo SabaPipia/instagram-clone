@@ -11,14 +11,9 @@ TODO:
 */
 
 export default function CustomHeader({ title }: { title: string }) {
-  // for development only
-  const checkFunc = (name: string) => {
-    console.log(`pressed ${name}`);
-  };
-
   return (
     <View style={styles.container}>
-      <Pressable onPress={() => checkFunc("logo")}>
+      <Pressable>
         <View style={styles.leftSideContainer}>
           <Image
             style={styles.logo}
@@ -35,13 +30,10 @@ export default function CustomHeader({ title }: { title: string }) {
         </View>
       </Pressable>
       <View style={styles.rightSideContainer}>
-        <Pressable
-          style={styles.icons}
-          onPress={() => checkFunc("notifications")}
-        >
+        <Pressable style={styles.icons}>
           <EvilIconsIcon name="heart" size={40} color="#333" />
         </Pressable>
-        <Pressable style={styles.icons} onPress={() => checkFunc("messenger")}>
+        <Pressable style={styles.icons}>
           <FontAwesomeIcon name="facebook-messenger" size={30} color={"#333"} />
         </Pressable>
       </View>

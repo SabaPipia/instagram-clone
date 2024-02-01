@@ -13,3 +13,13 @@ export interface StoryInterface {
   setStoryData: Dispatch<SetStateAction<any[]>>;
   storyData: any[];
 }
+
+export interface SortingStoryInterface {
+  id: string;
+  name: string;
+  owner?: boolean;
+  image: any;
+  hasPostedStory: boolean;
+  hasPostedStoryOnCloseFriends: boolean;
+  hasViewedStory: boolean;
+}

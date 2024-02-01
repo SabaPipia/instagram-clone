@@ -28,7 +28,6 @@ export default function StoryItem({
   const viewStoryHandler = () => {
     const updatedStoryData = storyData.map((story) => {
       if (story.id === item.id) {
-        console.log(story);
         return { ...story, hasViewedStory: true };
       }
       return story;

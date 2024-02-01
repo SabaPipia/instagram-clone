@@ -1,31 +1,18 @@
-import { LinearGradient } from "expo-linear-gradient";
 import React, { useState } from "react";
 import { View, StyleSheet, FlatList } from "react-native";
 import { StoryDataDummy } from "../config/DummyData/StoryData";
 import StoryItem from "./storyItem";
+import { sortStoryData } from "../utils/story/storySorting";
 
 // pluscircle for dark more
 
 export default function Story() {
   const [storyData, setStoryData] = useState(StoryDataDummy);
-  const sortedStoryData = [...storyData].sort((a, b) =>
-    a.owner && !b.owner
-      ? -1
-      : !a.owner && b.owner
-      ? 1
-      : a.hasViewedStory && !b.hasViewedStory
-      ? 1
-      : !a.hasViewedStory && b.hasViewedStory
-      ? -1
-      : !a.hasPostedStoryOnCloseFriends && b.hasPostedStoryOnCloseFriends
-      ? 1
-      : 0
-  );
 
   return (
     <View style={styles.container}>
       <FlatList
-        data={sortedStoryData}
+        data={sortStoryData(storyData)}
         renderItem={({ item }) => {
           return (
             <StoryItem
