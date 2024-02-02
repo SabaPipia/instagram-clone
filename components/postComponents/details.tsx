@@ -6,15 +6,14 @@ import {
   Pressable,
   TextInput,
 } from "react-native";
+import UserName from "./userName";
 
 export default function Details() {
   return (
     <View style={styles.container}>
       <Text style={styles.bold}>57 229 likes</Text>
       <View style={styles.caption}>
-        <Pressable>
-          <Text style={styles.bold}>Oliver</Text>
-        </Pressable>
+        <UserName name="Oliver" />
         <Text>Best Day</Text>
       </View>
       <Text style={styles.comments}>View all 82 comments</Text>
@@ -30,7 +29,7 @@ export default function Details() {
         <Text
           style={[
             {
-              fontSize: 8,
+              fontSize: 4,
               alignSelf: "center",
             },
             styles.dateText,

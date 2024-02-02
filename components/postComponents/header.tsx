@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, Image, Pressable } from "react-native";
 import EntypoIcons from "react-native-vector-icons/Entypo";
+import UserName from "./userName";
 
 export default function PostHeader() {
   return (
@@ -9,9 +10,7 @@ export default function PostHeader() {
           style={styles.profileImage}
           source={require("../../assets/userImages/user1.jpg")}
         />
-        <Pressable>
-          <Text style={styles.userName}>Oliver</Text>
-        </Pressable>
+        <UserName name="Oliver" />
       </View>
       <View style={styles.sideContainer}>
         <Pressable style={styles.followBtn}>
@@ -40,9 +39,6 @@ const styles = StyleSheet.create({
     width: 35,
     height: 35,
     borderRadius: 9999,
-  },
-  userName: {
-    fontWeight: "700",
   },
   followBtn: {
     backgroundColor: "#252A2F",
