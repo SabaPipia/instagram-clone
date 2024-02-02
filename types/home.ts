@@ -23,3 +23,16 @@ export interface SortingStoryInterface {
   hasPostedStoryOnCloseFriends: boolean;
   hasViewedStory: boolean;
 }
+
+export interface PostInterface {
+  id: string;
+  name: string;
+  userPic: any;
+  image: any;
+  isLiked: boolean;
+  isFavourited: boolean;
+  likesCount: string;
+  commentsCount: number;
+  caption: string;
+  date: string;
+}

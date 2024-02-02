@@ -2,10 +2,20 @@ import { View, StyleSheet, Pressable } from "react-native";
 import FontAwesomeIcons from "react-native-vector-icons/FontAwesome";
 import FeatherIcons from "react-native-vector-icons/Feather";
 
-export default function Actions({ isLiked }: { isLiked: boolean }) {
+export default function Actions({
+  isLiked,
+  LikePost,
+}: {
+  isLiked: boolean;
+  LikePost: (indicator: boolean) => void;
+}) {
   return (
     <View style={styles.container}>
-      <Pressable>
+      <Pressable
+        onPress={() => {
+          LikePost(!isLiked);
+        }}
+      >
         <FontAwesomeIcons
           name={isLiked ? "heart" : "heart-o"}
           size={28}
