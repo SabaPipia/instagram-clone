@@ -8,15 +8,25 @@ import {
 } from "react-native";
 import UserName from "./userName";
 
-export default function Details() {
+export default function Details({
+  likeCount,
+  caption,
+  commentCount,
+  date,
+}: {
+  likeCount: string;
+  caption: string;
+  commentCount: number;
+  date: string;
+}) {
   return (
     <View style={styles.container}>
-      <Text style={styles.bold}>57 229 likes</Text>
+      <Text style={styles.bold}>{likeCount} likes</Text>
       <View style={styles.caption}>
         <UserName name="Oliver" />
         <Text>Best Day</Text>
       </View>
-      <Text style={styles.comments}>View all 82 comments</Text>
+      <Text style={styles.comments}>View all {commentCount} comments</Text>
       <View style={styles.addComment}>
         <Image
           style={styles.ownerProfilePic}
@@ -25,7 +35,7 @@ export default function Details() {
         <TextInput placeholder="Add a comment..." />
       </View>
       <View style={styles.date}>
-        <Text style={styles.dateText}>17 hours ago </Text>
+        <Text style={styles.dateText}>{date} </Text>
         <Text
           style={[
             {

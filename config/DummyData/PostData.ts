@@ -1,0 +1,26 @@
+export const PostDataDummy = [
+  {
+    id: "0",
+    name: "John",
+    userPic: require("../../assets/userImages/user2.jpg"),
+    image: require("../../assets/postImages/post1.jpg"),
+    isLiked: false,
+    isFavourited: false,
+    likesCount: "539",
+    commentsCount: 2,
+    caption: "Best day of my life",
+    date: "4 hours ago",
+  },
+  {
+    id: "1",
+    name: "Oliver",
+    userPic: require("../../assets/userImages/user1.jpg"),
+    image: require("../../assets/postImages/post2.jpg"),
+    isLiked: true,
+    isFavourited: false,
+    likesCount: "1 232",
+    commentsCount: 13,
+    caption: "How Beautiful",
+    date: "2 days ago",
+  },
+];

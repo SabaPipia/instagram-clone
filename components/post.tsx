@@ -1,18 +1,20 @@
-import { StyleSheet, View, Image } from "react-native";
-import PostHeader from "./postComponents/header";
-import Actions from "./postComponents/actions";
-import Details from "./postComponents/details";
+import { StyleSheet, View, FlatList } from "react-native";
+import { useState } from "react";
+import { PostDataDummy } from "../config/DummyData/PostData";
+import PostCard from "./postComponents/postWrapper";
 
 export default function Post() {
+  const [postData, setPostData] = useState<any[]>(PostDataDummy);
+
   return (
     <View>
-      <PostHeader />
-      <Image
-        style={styles.postImage}
-        source={require("../assets/postImages/post2.jpg")}
+      <FlatList
+        data={postData}
+        renderItem={({ item }) => {
+          return <PostCard post={item} />;
+        }}
+        keyExtractor={(item) => item.id}
       />
-      <Actions />
-      <Details />
     </View>
   );
 }

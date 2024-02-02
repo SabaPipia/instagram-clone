@@ -1,14 +1,16 @@
-import { View, Text, StyleSheet, Image, Pressable } from "react-native";
-import AntDesign from "react-native-vector-icons/AntDesign";
+import { View, StyleSheet, Pressable } from "react-native";
 import FontAwesomeIcons from "react-native-vector-icons/FontAwesome";
 import FeatherIcons from "react-native-vector-icons/Feather";
-import Fontist from "react-native-vector-icons/Fontisto";
 
-export default function Actions() {
+export default function Actions({ isLiked }: { isLiked: boolean }) {
   return (
     <View style={styles.container}>
       <Pressable>
-        <FontAwesomeIcons name="heart-o" size={28} />
+        <FontAwesomeIcons
+          name={isLiked ? "heart" : "heart-o"}
+          size={28}
+          color={isLiked ? "#FF3040" : "black"}
+        />
       </Pressable>
       <Pressable>
         <FontAwesomeIcons name="comment-o" size={30} />

@@ -2,15 +2,18 @@ import { View, Text, StyleSheet, Image, Pressable } from "react-native";
 import EntypoIcons from "react-native-vector-icons/Entypo";
 import UserName from "./userName";
 
-export default function PostHeader() {
+export default function PostHeader({
+  profilePic,
+  userName,
+}: {
+  profilePic: any;
+  userName: string;
+}) {
   return (
     <View style={styles.container}>
       <View style={styles.sideContainer}>
-        <Image
-          style={styles.profileImage}
-          source={require("../../assets/userImages/user1.jpg")}
-        />
-        <UserName name="Oliver" />
+        <Image style={styles.profileImage} source={profilePic} />
+        <UserName name={userName} />
       </View>
       <View style={styles.sideContainer}>
         <Pressable style={styles.followBtn}>
