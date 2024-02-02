@@ -1,6 +1,7 @@
 import { View, StyleSheet, Pressable } from "react-native";
 import FontAwesomeIcons from "react-native-vector-icons/FontAwesome";
 import FeatherIcons from "react-native-vector-icons/Feather";
+import { horizontalMarginContainer } from "../../constants";
 
 export default function Actions({
   isLiked,
@@ -35,7 +36,7 @@ export default function Actions({
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    marginHorizontal: 10,
+    marginHorizontal: horizontalMarginContainer,
     gap: 10,
   },
 });
