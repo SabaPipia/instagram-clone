@@ -7,6 +7,7 @@ import {
   TextInput,
 } from "react-native";
 import UserName from "./userName";
+import { horizontalMarginContainer } from "../../constants";
 
 export default function Details({
   likeCount,
@@ -56,7 +57,7 @@ export default function Details({
 const styles = StyleSheet.create({
   container: {
     marginTop: 10,
-    marginHorizontal: 10,
+    marginHorizontal: horizontalMarginContainer,
   },
   bold: {
     fontWeight: "700",

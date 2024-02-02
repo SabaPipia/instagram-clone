@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Pressable, View, Text, StyleSheet, Image } from "react-native";
 import AntDesignIcons from "react-native-vector-icons/AntDesign";
 import { StoryInterface } from "../../types/home";
+import { horizontalMarginContainer } from "../../constants";
 
 export default function StoryItem({
   item,
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     padding: 2,
     // width: 75,
     // marginBottom: 5,
-    marginHorizontal: 5,
+    marginHorizontal: horizontalMarginContainer,
     marginBottom: 5,
   },
   userImage: {

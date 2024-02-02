@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image, Pressable } from "react-native";
 import EntypoIcons from "react-native-vector-icons/Entypo";
 import UserName from "./userName";
+import { horizontalMarginContainer } from "../../constants";
 
 export default function PostHeader({
   profilePic,
@@ -30,7 +31,7 @@ export default function PostHeader({
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    marginHorizontal: 10,
+    marginHorizontal: horizontalMarginContainer,
     justifyContent: "space-between",
   },
   sideContainer: {

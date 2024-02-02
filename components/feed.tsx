@@ -1,11 +1,13 @@
-import { StyleSheet, View, FlatList, Image } from "react-native";
+import { StyleSheet, View, FlatList, Text } from "react-native";
 import { useState } from "react";
 import { PostDataDummy } from "../config/DummyData/PostData";
 import PostCard from "./postComponents/postWrapper";
 import { PostInterface } from "../types/home";
 import Reels from "./reelComponents/reelWrapper";
+import Suggestions from "./user-suggestion/suggestionWrapper";
+import { horizontalMarginContainer } from "../constants";
 
-export default function Post() {
+export default function Feed() {
   const [postData, setPostData] = useState<PostInterface[]>(PostDataDummy);
 
   return (
@@ -16,7 +18,12 @@ export default function Post() {
           return (
             <View>
               {index === 3 && (
-                <View style={{ marginHorizontal: 10, marginBottom: 20 }}>
+                <View
+                  style={{
+                    marginHorizontal: horizontalMarginContainer,
+                    marginBottom: 20,
+                  }}
+                >
                   <Reels />
                 </View>
               )}
@@ -25,6 +32,7 @@ export default function Post() {
                 setPostData={setPostData}
                 postData={postData}
               />
+              {index === postData.length - 1 && <Suggestions />}
             </View>
           );
         }}
@@ -34,10 +42,4 @@ export default function Post() {
   );
 }
 
-const styles = StyleSheet.create({
-  postImage: {
-    width: "auto",
-    height: 350,
-    marginVertical: 10,
-  },
-});
+const styles = StyleSheet.create({});

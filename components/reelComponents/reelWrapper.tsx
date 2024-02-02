@@ -11,7 +11,7 @@ export default function Reels() {
 
       <FlatList
         data={reelsData}
-        renderItem={({ item, index }) => {
+        renderItem={({ item }) => {
           return (
             <Image
               style={{

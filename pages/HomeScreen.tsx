@@ -1,7 +1,8 @@
 import { Text, View, StyleSheet, ScrollView, FlatList } from "react-native";
 import Story from "../components/story";
 import Devider from "../components/devider";
-import Post from "../components/post";
+
+import Feed from "../components/feed";
 
 export default function HomeScreen() {
   const data = [{ key: "story" }, { key: "feed" }];
@@ -15,7 +16,7 @@ export default function HomeScreen() {
           case "story":
             return <Story />;
           case "feed":
-            return <Post />;
+            return <Feed />;
           default:
             break;
         }
