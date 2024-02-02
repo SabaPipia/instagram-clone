@@ -1,8 +1,9 @@
-import { StyleSheet, View, FlatList } from "react-native";
+import { StyleSheet, View, FlatList, Image } from "react-native";
 import { useState } from "react";
 import { PostDataDummy } from "../config/DummyData/PostData";
 import PostCard from "./postComponents/postWrapper";
 import { PostInterface } from "../types/home";
+import Reels from "./reelComponents/reelWrapper";
 
 export default function Post() {
   const [postData, setPostData] = useState<PostInterface[]>(PostDataDummy);
@@ -11,13 +12,20 @@ export default function Post() {
     <View>
       <FlatList
         data={postData}
-        renderItem={({ item }) => {
+        renderItem={({ item, index }) => {
           return (
-            <PostCard
-              post={item}
-              setPostData={setPostData}
-              postData={postData}
-            />
+            <View>
+              {index === 3 && (
+                <View style={{ marginHorizontal: 10, marginBottom: 20 }}>
+                  <Reels />
+                </View>
+              )}
+              <PostCard
+                post={item}
+                setPostData={setPostData}
+                postData={postData}
+              />
+            </View>
           );
         }}
         keyExtractor={(item) => item.id}
