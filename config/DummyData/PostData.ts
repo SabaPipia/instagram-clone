@@ -10,6 +10,7 @@ export const PostDataDummy = [
     commentsCount: 2,
     caption: "Best day of my life",
     date: "4 hours ago",
+    isFollowing: false,
   },
   {
     id: "1",
@@ -22,6 +23,7 @@ export const PostDataDummy = [
     commentsCount: 1,
     caption: "",
     date: "1 days ago",
+    isFollowing: false,
   },
   {
     id: "2",
@@ -34,6 +36,7 @@ export const PostDataDummy = [
     commentsCount: 13,
     caption: "How Beautiful",
     date: "2 days ago",
+    isFollowing: false,
   },
   {
     id: "3",
@@ -46,5 +49,6 @@ export const PostDataDummy = [
     commentsCount: 3,
     caption: "Nice",
     date: "2 hours ago",
+    isFollowing: false,
   },
 ];

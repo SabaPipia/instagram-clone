@@ -1,5 +1,5 @@
 import { StyleSheet, View, FlatList, Text } from "react-native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PostDataDummy } from "../config/DummyData/PostData";
 import PostCard from "./postComponents/postWrapper";
 import { PostInterface } from "../types/home";
@@ -9,7 +9,6 @@ import { horizontalMarginContainer } from "../constants";
 
 export default function Feed() {
   const [postData, setPostData] = useState<PostInterface[]>(PostDataDummy);
-
   return (
     <View>
       <FlatList

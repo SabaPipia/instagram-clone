@@ -22,6 +22,7 @@ export default function PostCard({
     commentsCount: number;
     caption: string;
     date: string;
+    isFollowing: boolean;
   };
   setPostData: Dispatch<SetStateAction<PostInterface[]>>;
   postData: PostInterface[];
@@ -52,7 +53,12 @@ export default function PostCard({
 
   return (
     <View style={styles.container}>
-      <PostHeader profilePic={post.userPic} userName={post.name} />
+      <PostHeader
+        profilePic={post.userPic}
+        userName={post.name}
+        isFollowing={post.isFollowing}
+        setPostData={setPostData}
+      />
       <Pressable onPress={handlePress}>
         <Image style={styles.postImage} source={post.image} />
       </Pressable>
